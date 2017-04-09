@@ -3,7 +3,7 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
-       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:bean="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                            http://www.springframework.org/schema/beans/spring-beans.xsd
                            http://www.springframework.org/schema/context
@@ -35,7 +35,7 @@
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/employee.db"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/employeeDB"/>
         <property name="username" value="root"/>
         <property name="password" value="cantopen"/>
     </bean>
@@ -55,7 +55,7 @@
         <!--<property name="maxStatements" value="10" />-->
     <!--</bean>-->
 
-    <bean id="empService" class="myapp.service.EmpServiceImpl"/>
+    <!--<bean id="empService" class="myapp.service.EmpServicreeceImpl"/>-->
     <tx:annotation-driven transaction-manager="txManager" />
     <bean id="txManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory"/>

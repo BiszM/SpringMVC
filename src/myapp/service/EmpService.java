@@ -12,5 +12,5 @@ public interface EmpService {
     public void update(Employee employee);
     public void delete(int empID);
     public Employee getEmployee(int empID);
-    public List<Employee> getAllEmployee();
+    public List getAllEmployee();
 }

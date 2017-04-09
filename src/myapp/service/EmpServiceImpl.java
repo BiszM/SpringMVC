@@ -37,7 +37,7 @@ public class EmpServiceImpl implements EmpService {
     }
 
     @Transactional
-    public List<Employee> getAllEmployee() {
+    public List getAllEmployee() {
         return empDao.getAllEmployee();
     }
 }

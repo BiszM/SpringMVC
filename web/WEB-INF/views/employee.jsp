@@ -9,8 +9,8 @@
 </head>
 <body>
     <h2>Insert employee all information to proceed.</h2>
-    <form:form method="POST" action="employee.do" commandName="employee">
-        <table>
+    <form:form method="POST" action="/employee.do" commandName="employee">
+        <table border="1">
             <tr>
                 <td>Employee ID</td>
                 <td><form:input path="empID" /></td>
@@ -40,7 +40,7 @@
                 <td><form:input path="faxNo"/></td>
             </tr>
             <tr>
-                <td>
+                <td colspan="2">
                     <input type="submit" value="ADD"/>
                     <input type="submit" value="EDIT">
                     <input type="submit" value="DELETE">

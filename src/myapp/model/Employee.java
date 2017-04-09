@@ -11,7 +11,7 @@ import javax.persistence.Table;
  * Created by bisz on 4/7/17.
  */
 @Entity
-@Table(name="emp_contacts")
+@Table(name="employee")
 public class Employee {
     @Id
     @Column

@@ -6,9 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Map;
 
@@ -30,7 +28,6 @@ public class EmpController {
         return "hello";
     }
 
-    @Transactional
     @RequestMapping("/index")
     public String setupForm(Map<String, Object>map){
         Employee employee = new Employee();
@@ -39,7 +36,6 @@ public class EmpController {
         return "employee";
     }
 
-    @Transactional
     @RequestMapping(value = "/employee.do", method = RequestMethod.POST)
     public String doActions(@ModelAttribute Employee employee, @RequestParam String action,
                             Map<String, Object> map){
